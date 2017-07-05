@@ -1,0 +1,25 @@
+{
+  "name": "apirest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "*.*",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "connect-flash": "*",
+    "consign": "^0.1.6",
+    "cookie-parser": "*.*",
+    "express": "*.*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-stormpath": "^3.2.0",
+    "express-validator": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
