@@ -1,23 +1,27 @@
 var File = require('../repository/File')
 "use strict";
 
-var getFile = function() {
+var getFile = function(orderId) {
+   return new Promise(function (resolve, reject) {
   file = new File.File();
    file
     .read()
       .then(function(data){
-          return getOrders(data);
+          if (orderId != undefined)
+               resolve(getOrders(data));
+          else {
+               resolve(deleteOrder(data, orderId));
+          }     
       })
+    }) 
 }
 
 function  getOrders (file) {
-    console.log(file)
     var orders = []
     file.forEach((item) => {
         var fields = item.split(",")
          orders.push(mapping(fields))
       })
-      console.log(orders)
     return orders
   }
 
